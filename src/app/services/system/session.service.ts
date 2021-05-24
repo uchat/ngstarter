@@ -14,7 +14,13 @@ export class SessionService {
       "username": loginInfo.email,
       "password": loginInfo.password      
     }
-    return null;
+    return new Observable((sub) => {
+      if (loginInfo.email != "" && loginInfo.password != "") {
+        sub.next(true);
+      } else {
+        sub.error("Please enter user name/password");
+      }
+    });
   //  return this.http.post(ENDPOINT.LOG_IN(), data)
   //         .pipe(
   //             // catchError((err: any) => {

@@ -25,27 +25,15 @@ export class LoginViewComponent implements OnInit {
   }
 
   onLoginBttnClicked(): void {
-
-    // this.sessionService.login(this.loginInfo)
-    //   .subscribe(
-    //     (result: TokenSet) => {
-    //       this.spinnerService.hide();
-    //       this.sessionService.clearSelfName();
-    //       if (result.forceChangePassword) {
-    //         this.router.navigate(['/login/change']);
-    //       } else {
-    //         this.router.navigate(['/asm/dashboard']);
-    //       }
-    //     },
-    //     (err: ApiError) => {
-    //       this.spinnerService.hide();
-    //       if (err.is401()) {
-    //         this.msg = err.message;
-    //       } else {
-    //         this.msg = err.message ? err.message : "unknown error";
-    //       }
-    //     }
-    //   );
+    this.sessionService.login(this.loginInfo)
+      .subscribe(
+        (result: boolean) => {
+            this.router.navigate(['/asm/dashboard']);
+        },
+        (err: string) => {
+          this.msg = err;
+        }
+      );
   }
 
 }

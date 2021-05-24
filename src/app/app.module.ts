@@ -10,6 +10,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { ResourceNotFoundViewComponent } from './views/errors/resource-not-found-view/resource-not-found-view.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardViewComponent } from './views/dashboard-view/dashboard-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginViewComponent,
     SideNavComponent,
     TopNavComponent,
-    ResourceNotFoundViewComponent
+    ResourceNotFoundViewComponent,
+    DashboardViewComponent
   ],
   imports: [
     BrowserModule,
