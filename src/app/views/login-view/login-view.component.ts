@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginInfo } from 'src/app/models/LoginInfo.model';
+import { SessionService } from 'src/app/services/system/session.service';
 
 @Component({
   selector: 'app-login-view',
@@ -16,7 +17,9 @@ export class LoginViewComponent implements OnInit {
 
   msg: string = "";
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private sessionService: SessionService) { }
 
   ngOnInit(): void {
   }
