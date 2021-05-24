@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { ResourceNotFoundViewComponent } from './views/errors/resource-not-found-view/resource-not-found-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ResourceNotFoundViewComponent } from './views/errors/resource-not-found
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
